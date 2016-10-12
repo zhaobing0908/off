@@ -16,11 +16,9 @@
 <div id="oDiv">关闭</div>
 <script type="text/javascript">
     function wClose(){
-	    window.history.back();
-      window.opener=null;
-						window.close();
-						self.opener=null;
-						self.close();
+	   window.close();
+        self.close();
+        window.history.back();
 						/*WeixinJSBridge.invoke('closeWindow');
 						WeixinJSBridge.call('closeWindow');*/
 						
