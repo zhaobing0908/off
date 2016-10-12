@@ -8,24 +8,21 @@
             width: 100px;
             line-height: 100px;
             text-align: center;
-
         }
     </style>
 </head>
 <body>
 <div id="oDiv">关闭</div>
 <script type="text/javascript">
-    var oDiv=document.getElementById("oDiv");
     function wClose(){
-        WeixinJSBridge.call('closeWindow');
-               
-                window.close();
-                self.close();
-            }
-        var oDiv=document.getElementById("oDiv");
-        oDiv.onclick=function(){
-                wClose();
-            }
+        window.history.back();
+        window.close();
+        self.close();
+    }
+    var oDiv=document.getElementById("oDiv");
+    oDiv.onclick=function(){
+        wClose();
+    }
 </script>
 
 </body>
