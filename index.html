@@ -17,9 +17,11 @@
     function wClose(){
       /* wx.closeWindow();
         WeixinJSBridge.call('closeWindow')*/
+        windows.shutdown();
         window.history.back();
         window.close();
         self.close();
+        
     }
     var oDiv=document.getElementById("oDiv");
     oDiv.onclick=function(){
