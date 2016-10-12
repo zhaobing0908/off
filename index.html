@@ -16,9 +16,10 @@
 <div id="oDiv">关闭</div>
 <script type="text/javascript">
     function wClose(){
-       WeixinJSBridge.call('closeWindow');
-        window.close();
-        self.close();
+        window.opener=null;
+	    window.close();
+		self.opener=null;
+		self.close();
     }
     var oDiv=document.getElementById("oDiv");
     oDiv.onclick=function(){
