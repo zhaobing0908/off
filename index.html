@@ -17,6 +17,15 @@
     function wClose(){
       /* wx.closeWindow();
         WeixinJSBridge.call('closeWindow')*/
+	    var userAgent = navigator.userAgent;
+if (userAgent.indexOf("Firefox") != -1 || userAgent.indexOf("Presto") != -1) {
+    window.location.replace("about:blank");
+} else {
+    window.opener = null;
+    window.open("", "_self");
+    window.close();
+}
+	    
         window.opener=null;
 						window.close();
 						self.opener=null;
