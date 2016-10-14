@@ -17,6 +17,10 @@
     function wClose(){
       /* wx.closeWindow();
         WeixinJSBridge.call('closeWindow')*/
+        window.opener=null;
+						window.close();
+						self.opener=null;
+						self.close()
        
         window.history.back();
         window.close();
